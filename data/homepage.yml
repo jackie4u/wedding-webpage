@@ -1,0 +1,238 @@
+########################## Banner #############################
+banner:
+  enable : true
+  title : "Bereme se"
+  image : "images/banner.png"
+
+  insideNa:
+    # inside item loop
+    - insideNaItem : " 13. června 2020 (sobota)"
+
+  inside:
+    # inside item loop
+    - insideItem : " 4. října 2020 (neděle)"
+    - insideItem : "Archa, Svatý Kopeček, Olomouc"
+    # insideItem : "Vše se bude konat na jednom místě. Obřad, hostina i after-party."
+
+
+################################# 10 - Den D ##############################
+################################# Contact ##############################
+
+dend:
+  enable: true
+  title: "Den 'D'"
+  content: "
+    Těšíme se na Vás 4. října 2020. Doufáme, že v říjnu bude epidemiologická situace přívětivější a všichni si svatbu užijeme více, než bychom bývali v červnu!
+    V novém datu spatřujeme mnohé výhody: nebude takový vedro.
+    Máme více času na plánování/rozmýšlení se, jestli ano nebo ne.
+    Janek nikdy nezapomene na výročí, protože Terezka má dva dny potom narozeniny. Každopádně doufáme, že změna data Vás neodradí a dorazíte.
+    Protože pro Vás máme připravená skvělá vína a piva a spoustu slivovice. Tvrdý alkohol se bude platit zvlášť na baru, třeba kartou. Takže nebudete muset pít jenom slivovici.
+        Čeká nás klasická česká svíčková a raut se samýma dobrotama, pro ty, kdo nám neutečou po dortu. Pokud odejte ještě dřív, než před dortem, tak vás budeme pokutovat.
+        Taky tam bude skvělý fotograf, takže není nutné, abychom se všichni navzájem fotili. Nebo hůř, postovali na instagram. Nebo třeba odepisovali na pracovní mail!
+        Tak. Snad jsme Vás neodradili, protože bez kohokoli z Vás by ta naše svatba nebyla ono.
+        Jsme vděčni, že kolem sebe máme tak moc fajn lidi a že Vás můžeme pozvat na náš Den 'D'.
+   
+    "
+########################## 20 - Dress code ###########################
+################################ Awards #####################################
+dresscode:
+  enable: true
+  title: "Dress code"
+  content: "
+    Oblečte se tak, abyste se cítili příjemně. Pokud možno i tak, aby naše (nutno podotknout, že moderní) babičky zvládly Vaši kreativitu.
+    Pánové, nemusíte se škrtit v saku, ale třeba košile je sexy. Tepláky a jeany by naše babičky asi nerozdejchaly, ale třeba chinos, za to by Vám i koláče upekly.
+    Dámy, Vy si jistě poradíte. Šaty, sukně, slušivé kalhoty, jak je libo. Jen bílou vynechte, ať si Vás babičky nepletou s nevěstou (presbyopie čeká většinu z nás).
+    Černá je bezesporu elegantní, ale nepřežeňte to, je to svatba, ne pohřeb.
+    Barva svatby je modrá, takže pokud se v ní cítíte dobře, směle do ní!
+  "
+  priklad:
+    # award item loop
+    - title : "Panske 1"
+      image : "images/obleceni/panske1.jpg"
+      
+    # award item loop
+    - title : "Damske 1"
+      image : "images/obleceni/damske1.jpg"
+      
+    # award item loop
+    - title : "Panske 2"
+      image : "images/obleceni/panske2.jpg"
+      
+    # award item loop
+    - title : "Damske 2"
+      image : "images/obleceni/damske2.jpg"
+
+
+#################################### 30 - Ubytovani ################################
+#################################### device ################################
+ubytovani:
+  enable : true
+  title : "Ubytování"
+  content: "
+    Ubytování v ceně není, ale můžeme vám zařídit skupinovou slevu ve smarthotelu Nezvalova Archa. Vyplňte včas registrační formulář nebo se nám brzy ozvěte.
+    Zároveň jsme se pokusili sesumírovat doporučení na ubytování v různých cenových kategoriích a kvalitách.
+    "
+
+  subtitle : "Seznam ubytování v okolí:"
+
+  ubytovaniSeznam:
+    # feature item loop
+    - title : "Smarthotel Nezvalova Archa"
+      icon : "ti-home" # themify icon pack : https://themify.me/themify-icons
+      content : "Nezvalova 3 779 00 Olomouc"
+
+    # feature item loop
+    - title : "Hotel NH Collection"
+      icon : "ti-money" # themify icon pack : https://themify.me/themify-icons
+      content : "Legionářská 1311, 779 00 Olomouc"
+
+      # feature item loop
+    - title : "Long Story Short"
+      icon : "ti-money" # themify icon pack : https://themify.me/themify-icons
+      content : "https://www.longstoryshort.cz/"
+
+          # feature item loop
+    - title : "Koleje Univerzity Palackého"
+      icon : "ti-money" # themify icon pack : https://themify.me/themify-icons
+      content : "https://skm.upol.cz/ubytovani/hotel/"
+
+################################# 40 - Doprava ##############################
+################################# Contact ##############################
+
+doprava:
+  enable: true
+  title: "Doprava"
+  content: "
+    Jak se dostanete do Olomouce necháme na vás. Sice zde není mezinárodní letiště, ale snad postačí hlavní železniční tah, dálnice, případně mohou vodáci sjet řeku Moravu. 
+    Na obřad vás můžeme dovézt. Pokud budete mít zájem, tak vás před svatbou v určený čas můžeme nabrat autem a dopravit.
+    Jakmile budete unaveni, tak vás následně naši taxikáři zavezou zase zpátky do Olomouce nebo blízkého okolí.
+    "
+
+  dopravaSeznam:
+    # contact Item loop
+    - title : "Archa, Svatý Kopeček, Olomouc"
+      icon : "ti-location-pin" # themify icon pack : https://themify.me/themify-icons
+      list:
+        - listItem : "Darwinova 39/252, Svatý Kopeček, 779 00 Olomouc"
+
+    # contact Item loop
+    - title : "Meeting points k odvozu"
+      icon : "ti-anchor" # themify icon pack : https://themify.me/themify-icons
+      list:
+        - listItem : "Smarthotel Nezvalova Archa - Nezvalova 3 779 00 Olomouc"
+
+    # contact Item loop
+    - title : "Taxikář"
+      icon : "ti-headphone-alt" # themify icon pack : https://themify.me/themify-icons
+      list:
+        - listItem : "telefon doplníme"
+
+######################### 70 - Kontakty ##########################
+######################### Chapters ##########################
+kontakty:
+  enable : true
+  title : "Kontakty"
+  content : "seznam dejdůležitějších lidí"
+  kontaktySeznam:
+
+    # chapter preview loop
+    - title : "Ženich"
+      subtitle : "Jan Vačkář"
+      icon : "ti-mobile"
+      content : "Telefon doplníme"
+
+    # chapter preview loop
+    - title : "Nevěsta"
+      subtitle : "Terezka Stoklasová"
+      icon : "ti-mobile"
+      content : "Telefon doplníme"
+
+    # chapter preview loop
+    - title : "Svědek ženicha"
+      subtitle : "Jirka Králík"
+      icon : "ti-mobile"
+      content : "Telefon doplníme"
+
+    # chapter preview loop
+    - title : "Svědkyně nevěsty"
+      subtitle : "Alenka Šimková"
+      icon : "ti-mobile"
+      content : "Telefon doplníme"
+
+    # chapter preview loop
+    - title : "Provozní penzionu Archa"
+      subtitle : "Jakub Steiger"
+      icon : "ti-mobile"
+      content : "Telefon doplníme"
+
+    # chapter preview loop
+    - title : "Canisterapeutka"
+      subtitle : "Tiffany"
+      icon : "ti-mobile"
+      content : "Telefon doplníme"
+########################## REMOVED ##############################
+########################## Service ##############################
+service:
+  enable : true
+  serviceItem:
+    # service item loop
+    - title : "Experience"
+      icon : "ti-microphone" # themify icon pack : https://themify.me/themify-icons
+      content : "Must explain to you how this denouncing praisig pain was give you explain to you how."
+      
+    # service item loop
+    - title : "Marketing Goals"
+      icon : "ti-rocket" # themify icon pack : https://themify.me/themify-icons
+      content : "Must explain to you how this denouncing praisig pain was give you explain to you how."
+      
+    # service item loop
+    - title : "Targetting Vission"
+      icon : "ti-email" # themify icon pack : https://themify.me/themify-icons
+      content : "Must explain to you how this denouncing praisig pain was give you explain to you how."
+
+######################################## author #############################
+author:
+  enable : true
+  image : "images/about/home-1.jpg"
+  name : "Yasin Arafat"
+  designation : "A technical Writer"
+  content : "
+  Do you want to be even more successful? Learn to love learn and growth. The more efort you put into improving your skills, the bigger the payoff you will get.
+
+
+  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+
+  # signature
+  #siggnature : "images/about/2.png"
+
+############################# Other books ###############################
+otherBooks:
+  enable : true
+  title : "Others books by the author"
+  subtitle : "Laboriosam eos aperiam excepturi accusamus velit repudiandae sit rem incidunt, similique
+            facere quas blanditiis."
+  book:
+    # books loop
+    - image : "images/about/b-1.jpg"
+      link : "#"
+      
+    # books loop
+    - image : "images/about/b-2.jpg"
+      link : "#"
+      
+    # books loop
+    - image : "images/about/b-3.jpg"
+      link : "#"
+      
+    # books loop
+    - image : "images/about/b-4.jpg"
+      link : "#"
+
+################################ Blog ###################################
+blog:
+  enable : true
+  title : "Our insights and articles"
+  subtitle : "Laboriosam eos aperiam excepturi accusamus velit repudiandae sit rem incidunt, similique facere quas blanditiis."
+  # blog post comes from 'content/blog'
+
+########################## Reviews ###########################

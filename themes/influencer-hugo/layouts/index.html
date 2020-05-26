@@ -1,0 +1,270 @@
+{{ define "main" }}
+
+<!-- Banner -->
+{{ if .Site.Data.homepage.banner.enable }}
+{{ with .Site.Data.homepage.banner }}
+<section class="banner-main py-7" id="banner" style="background-image: url('{{ .image | relURL }}');">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-7 col-md-8">
+        <div class="main-banner">
+          <h1 class="mb-3 mt-2">{{ .title | markdownify }}</h1>
+          <p class="mb-4">{{ .content | markdownify }}</p>
+          <div class="book-info">
+            <ul class="list-unstyled mt-4 mb-5">
+              {{ range .insideNa }}
+                <li><s>{{ .insideNaItem | markdownify }}</s></li>
+              {{ end }}
+              {{ range .inside }}
+                <li>{{ .insideItem | markdownify }}</li>
+              {{ end }}
+            </ul>
+          </div>
+          <button class="snipcart-add-item btn btn-main mt-2" data-item-id="1"
+          data-item-name="{{ .title | markdownify }}" data-item-image="{{ .image | relURL }}" onClick="window.open('https://forms.gle/bsCoFEByQ6fJ2avt8');">
+          Registrovat se <i class="ti-angle-right ml-3"></i>
+        </button>
+        </div>
+      </div>
+
+      <!--{{ if .image }}
+      <div class="col-lg-5 d-none d-lg-block">
+        <div class="banner-img pt-5">
+          <img src="{{ .image | relURL }}" alt="{{ .title | markdownify }}" class="img-fluid" style="width: 100%">
+        </div>
+      </div>
+      {{ end }}-->
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- 5 - Oznámení -->
+<!-- Book preview --> 
+{{ if .Site.Data.homepage.oznameni.enable }}
+{{ with .Site.Data.homepage.oznameni }}
+<section class="setcion" id="oznameni">
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="section-heading">
+            <h2 class="text-lg text-center">{{ .title | markdownify }}</h2>
+            <p>{{ .content | markdownify }}</p>
+            <div class="book-info">
+               <ul class="list-unstyled mt-4 mb-5">
+                {{ range .insideNa }}
+                  <li>{{ .insideNaItem | markdownify }}</li>
+                {{ end }}
+                {{ range .inside }}
+                  <li>{{ .insideItem | markdownify }}</li>
+                {{ end }}
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{{ end }}
+{{ end }}
+
+
+<!-- 10 - den d -->
+<!-- Contact -->
+{{ if .Site.Data.homepage.dend.enable }}
+{{ with .Site.Data.homepage.dend }}
+<section class="setcion contact" id="dend">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-8">
+        <div class="section-heading text-center">
+          <h2 class="mb-2 text-lg">{{ .title | markdownify }}</h2>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+{{ end }}
+{{ end }}
+
+<!-- 20 - dresscode-->
+{{ if .Site.Data.homepage.dresscode.enable }}
+{{ with .Site.Data.homepage.dresscode }}
+<section id="dresscode" class="section bg-grey" id="awards">
+   <div class="container">
+     <div class="row justify-content-center">
+       <div class="col-lg-8">
+         <div class="section-heading text-center">
+           <h2 class="text-lg">{{ .title | markdownify }}</h2>
+           <p>{{ .content | markdownify }}</p>
+         </div>
+       </div>
+     </div>
+ 
+     <div class="row">
+       {{ range .priklad }}
+       <div class="col-lg-3 col-sm-6">
+         <div class="award-block text-center p-4 border mb-4">
+           <h5 class="mb-3">{{ .title | markdownify }}</h5>
+           <img src="{{ .image | relURL }}" alt="" class="img-fluid">
+         </div>
+       </div>
+       {{ end }}
+     </div>
+   </div>
+ </section>
+{{ end }}
+{{ end }}
+<!-- /dresscode-->
+
+<!-- 30 - Ubytovani -->
+<!-- Device feature -->
+{{ if .Site.Data.homepage.ubytovani.enable }}
+{{ with .Site.Data.homepage.ubytovani }}
+<section class="section" id="ubytovani">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <h2 class="mb-4">{{ .title | markdownify }}</h2>
+        <p>{{ .content | markdownify }}</p>
+        <p>{{ .subtitle | markdownify }}</p>
+
+        {{ range .ubytovaniSeznam }}
+        <div class="feature-item d-flex mt-5 mb-3">
+          {{ if .icon }}
+          <div class="icon-block">
+            <i class="{{ .icon }}"></i>
+          </div>
+          {{ end }}
+          <div class="content">
+            <h5>{{ .title | markdownify }}</h5>
+            <p>{{ .content | markdownify }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /Ubytovani -->
+
+<!-- 40 - Doprava -->
+<!-- Contact -->
+{{ if .Site.Data.homepage.doprava.enable }}
+{{ with .Site.Data.homepage.doprava }}
+<section class="setcion bg-grey contact" id="doprava">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-8">
+        <div class="section-heading text-center">
+          <h2 class="mb-2 text-lg">{{ .title | markdownify }}</h2>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      {{ range .dopravaSeznam }}
+      <div class="col-lg-4 col-sm-6">
+        <div class="contact-info-block text-center mb-4">
+          <i class="{{ .icon }}"></i>
+          <p class="mb-0">{{ .title | markdownify }}</p>
+          {{ range .list }}
+          <h5>{{ .listItem }}</h5>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /Doprava -->
+
+<!-- 50 - Harmonogram -->
+<!-- Book preview -->
+{{ if .Site.Data.homepage.harmonogram.enable }}
+{{ with .Site.Data.homepage.harmonogram }}
+<section class="setcion" id="harmonogram">
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="section-heading">
+            <h2 class="text-lg text-center">{{ .title | markdownify }}</h2>
+            <p>{{ .content | markdownify }}</p>
+            <div class="book-info">
+               <ul class="list-unstyled mt-4 mb-5">
+                  {{ range .inside }}
+                     <li>{{ .insideItem | markdownify }}</li>
+                  {{ end }}
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /Harmonogram -->
+
+<!-- 60 - Dary -->
+<!-- Quote -->
+{{ if .Site.Data.homepage.dary.enable }}
+{{ with .Site.Data.homepage.dary }}
+<section class="section bg-grey" id="dary">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center">
+          <h2 class="text-lg">{{ .title | markdownify }}</h2>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /Dary -->
+
+<!-- 70 - Kontakty -->
+<!-- Chapter -->
+{{ if .Site.Data.homepage.kontakty.enable }}
+{{ with .Site.Data.homepage.kontakty }}
+<section class="setcion chapter" id="kontakty">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h2 class="text-lg">{{ .title | markdownify }}</h2>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {{ range .kontaktySeznam }}
+      <div class="col-sm-6">
+        <div class="chapter-item">
+          <h4>{{ .title | markdownify }}</h4>
+          <h5>{{ .subtitle | markdownify }}</h5>
+          {{ if .icon }}
+          <div class="icon-block">
+            <i class="{{ .icon }}"></i>
+          </div>
+          {{ end }}
+          <div class="content">
+            <p>{{ .content | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /Kontakty -->
+
+
+{{ end }}

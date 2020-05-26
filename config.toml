@@ -1,0 +1,146 @@
+######################## default configuration ####################
+baseURL = "http://www.svatbaroku.eu"
+# baseURL = "https://storage.cloud.google.com/svatbaroku-sg/"
+languageCode = "en-us"
+title = "Terezka a Janek"
+theme = "influencer-hugo"
+summaryLength = "10"
+paginate = 7
+publishDir = "docs"
+
+############################# Plugins ##############################
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick/slick.css"
+  [[params.plugins.css]]
+  URL = "plugins/themify-icons/themify-icons.css"
+  [[params.plugins.css]]
+  URL = "plugins/magnific-popup/magnific-popup.css"
+  
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/slick/slick.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/magnific-popup/magnific-popup.min.js"
+
+############################## navigation ###############################
+[menu]
+
+  [[menu.main]]
+  name = "Den 'D'"
+  URL = "dend" # "review"
+  weight = 10
+
+  [[menu.main]]
+  name = "Dress code"
+  URL = "dresscode" # "review"
+  weight = 20
+
+  [[menu.main]]
+  name = "Ubytování"
+  URL = "ubytovani" # "device"
+  weight = 30
+
+  [[menu.main]]
+  name = "Doprava"
+  URL = "doprava" # "contact" 
+  weight = 40
+
+  [[menu.main]]
+  name = "Harmonogram"
+  URL = "harmonogram" #"book"
+  weight = 50
+
+  [[menu.main]]
+  name = "Dary"
+  URL = "dary" # "quote"
+  weight = 60
+
+  [[menu.main]]
+  name = "Kontakty"
+  URL = "kontakty"  # "chapter"
+  weight = 70
+
+#################### default parameters ################################
+[params]
+# logo = ""
+# home = "Home"
+# Meta data
+# description = "This is meta description"
+# author = "Terezka a Janek"
+# Google Analitycs
+# googleAnalitycsID = "Your ID"
+
+  # Preloader
+  [params.preloader]
+  enable = true
+  preloader = ".png" # use .png , .svg or .gif format
+
+  # Navigation get start button
+  [params.navButton]
+  enable = true
+
+############################# Footer ########################
+[params.footer]
+content = "Terezka a Janek"
+# Copyright
+copyright = "Copyright &copy; 2020 Terezka a Janek &trade; All Rights Reserved"
+
+
+############################# Deployment ########################
+
+#[deployment]
+# By default, files are uploaded in an arbitrary order.
+# Files that match the regular expressions in the "Order" list
+# will be uploaded first, in the listed order.
+#order = [".jpg$", ".gif$"]
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+#name = "google"
+# The Go Cloud Development Kit URL to deploy to. Examples:
+# GCS; see https://gocloud.dev/howto/blob/#gcs
+#URL = "gs://svatbaroku-sg"
+
+# S3; see https://gocloud.dev/howto/blob/#s3
+# For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
+# URL = "s3://<Bucket Name>?region=<AWS region>"
+
+# Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure
+#URL = "azblob://$web"
+
+# You can use a "prefix=" query parameter to target a subfolder of the bucket:
+# URL = "gs://<Bucket Name>?prefix=a/subfolder/"
+
+# If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
+# cloudFrontDistributionID = <ID>
+
+
+# ... add more [[deployment.targets]] sections ...
+
+
+# [[deployment.matchers]] configure behavior for files that match the Pattern.
+# Samples:
+
+#[[deployment.matchers]]
+#  Cache static assets for 1 year.
+#pattern = "^.+\\.(js|css|svg|ttf)$"
+#cacheControl = "max-age=31536000, no-transform, public"
+#gzip = true
+
+#[[deployment.matchers]]
+#pattern = "^.+\\.(png|jpg)$"
+#cacheControl = "max-age=31536000, no-transform, public"
+#gzip = false
+
+#[[deployment.matchers]]
+#pattern = "^.+\\.(html|xml|json)$"
+#gzip = true
