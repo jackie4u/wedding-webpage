@@ -1,7 +1,7 @@
 ######################## default configuration ####################
-# baseURL = "http://www.svatbaroku.eu"
+baseURL = "http://www.svatbaroku.eu"
 # baseURL = "https://storage.cloud.google.com/svatbaroku-sg/"
-baseURL = "https://jackie4u.github.io/wedding-webpage/"
+# baseURL = "https://jackie4u.github.io/wedding-webpage/"
 languageCode = "en-us"
 title = "Terezka a Janek"
 theme = "influencer-hugo"
