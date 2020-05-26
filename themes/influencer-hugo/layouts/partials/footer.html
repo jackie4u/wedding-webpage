@@ -20,7 +20,7 @@
 
 {{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range .Site.Params.plugins.js}}
-<script src="{{ .URL | relURL }}"></script>
+<script src="{{ .URL | absURL }}"></script>
 {{ end }}
 
 <!-- snipcart -->
