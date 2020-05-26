@@ -13,10 +13,10 @@
           <div class="book-info">
             <ul class="list-unstyled mt-4 mb-5">
               {{ range .insideNa }}
-                <li><s>{{ .insideNaItem | markdownify }}</s></li>
+                <li><s> {{ .insideNaItem }} </s></li>
               {{ end }}
               {{ range .inside }}
-                <li>{{ .insideItem | markdownify }}</li>
+                <li><b> {{ .insideItem }} </b></li>
               {{ end }}
             </ul>
           </div>
@@ -26,47 +26,11 @@
         </button>
         </div>
       </div>
-
-      <!--{{ if .image }}
-      <div class="col-lg-5 d-none d-lg-block">
-        <div class="banner-img pt-5">
-          <img src="{{ .image | relURL }}" alt="{{ .title | markdownify }}" class="img-fluid" style="width: 100%">
-        </div>
-      </div>
-      {{ end }}-->
     </div>
   </div>
 </section>
 {{ end }}
 {{ end }}
-
-<!-- 5 - Oznámení -->
-<!-- Book preview --> 
-{{ if .Site.Data.homepage.oznameni.enable }}
-{{ with .Site.Data.homepage.oznameni }}
-<section class="setcion" id="oznameni">
-   <div class="container">
-      <div class="row justify-content-center">
-         <div class="section-heading">
-            <h2 class="text-lg text-center">{{ .title | markdownify }}</h2>
-            <p>{{ .content | markdownify }}</p>
-            <div class="book-info">
-               <ul class="list-unstyled mt-4 mb-5">
-                {{ range .insideNa }}
-                  <li>{{ .insideNaItem | markdownify }}</li>
-                {{ end }}
-                {{ range .inside }}
-                  <li>{{ .insideItem | markdownify }}</li>
-                {{ end }}
-               </ul>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-{{ end }}
-{{ end }}
-
 
 <!-- 10 - den d -->
 <!-- Contact -->
@@ -188,21 +152,21 @@
 {{ if .Site.Data.homepage.harmonogram.enable }}
 {{ with .Site.Data.homepage.harmonogram }}
 <section class="setcion" id="harmonogram">
-   <div class="container">
-      <div class="row justify-content-center">
-         <div class="section-heading">
-            <h2 class="text-lg text-center">{{ .title | markdownify }}</h2>
-            <p>{{ .content | markdownify }}</p>
-            <div class="book-info">
-               <ul class="list-unstyled mt-4 mb-5">
-                  {{ range .inside }}
-                     <li>{{ .insideItem | markdownify }}</li>
-                  {{ end }}
-               </ul>
-            </div>
-         </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="section-heading">
+        <h2 class="text-lg text-center">{{ .title | markdownify }}</h2>
+        <p>{{ .content | markdownify }}</p>
+        <div class="book-info">
+          <ul class="list-unstyled mt-4 mb-5">
+            {{ range .inside }}
+              <li>{{ .insideItem | markdownify }}</li>
+            {{ end }}
+          </ul>
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
 </section>
 {{ end }}
 {{ end }}

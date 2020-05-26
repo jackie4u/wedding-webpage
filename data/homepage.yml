@@ -30,8 +30,7 @@ dend:
         Čeká nás klasická česká svíčková a raut se samýma dobrotama, pro ty, kdo nám neutečou po dortu. Pokud odejte ještě dřív, než před dortem, tak vás budeme pokutovat.
         Taky tam bude skvělý fotograf, takže není nutné, abychom se všichni navzájem fotili. Nebo hůř, postovali na instagram. Nebo třeba odepisovali na pracovní mail!
         Tak. Snad jsme Vás neodradili, protože bez kohokoli z Vás by ta naše svatba nebyla ono.
-        Jsme vděčni, že kolem sebe máme tak moc fajn lidi a že Vás můžeme pozvat na náš Den 'D'.
-   
+        Jsme vděčni, že kolem sebe máme tak moc fajn lidi a že Vás můžeme pozvat na náš Den 'D'. 
     "
 ########################## 20 - Dress code ###########################
 ################################ Awards #####################################
@@ -127,6 +126,38 @@ doprava:
       list:
         - listItem : "telefon doplníme"
 
+
+######################## 50 - Harmonogram ##########################
+######################## Book ##########################
+
+harmonogram:
+  enable: false
+  title: "Harmonogram svatby"
+  content: "Připravujeme!"
+
+  inside:
+    # inside item loop
+    #- insideItem : "13:06 - Sraz na paloučku poblíž penzionu"
+    # insideItem : "Sraz na paloučku poblíž penzionu"
+    #- insideItem : "14:07 - Se rozhodne jestli ANO nebo NE"
+    #- insideItem : "15:08 - Budeme hodovat"
+    #- insideItem : "Budeme hodovat"
+    #- insideItem : "16:09 - Zakrojíme dort"
+    #- insideItem : "Zakrojíme dort"
+    #- insideItem : "17:12 - Přidají se k nám zvířata"
+    #- insideItem : "18:09 - Budeme tancovat"
+    #- insideItem : "Budeme tancovat"
+    #- insideItem : "20:10 - Budeme zase jíst"
+    #- insideItem : "21:11 - Zábava do posledního stojícího"
+    #- insideItem : "03:03 - Všechna zvířata se vráti do Zoo"
+
+######################################## 60 - Dary #############################
+######################### Quote #############################
+dary:
+  enable : true
+  title : "Dary"
+  content: "Nic nám nedávejte. Pokud si však vaše filantropické já nemůže pomoci, tak nám můžete poslat libovolnou částku (ideálně v české měně) rovnou na náš společný účet. Peníze použijeme transparentně na zaplacení společného dobrého jídla. Co zbyde, tak procestujeme!"
+
 ######################### 70 - Kontakty ##########################
 ######################### Chapters ##########################
 kontakty:
@@ -170,69 +201,3 @@ kontakty:
       subtitle : "Tiffany"
       icon : "ti-mobile"
       content : "Telefon doplníme"
-########################## REMOVED ##############################
-########################## Service ##############################
-service:
-  enable : true
-  serviceItem:
-    # service item loop
-    - title : "Experience"
-      icon : "ti-microphone" # themify icon pack : https://themify.me/themify-icons
-      content : "Must explain to you how this denouncing praisig pain was give you explain to you how."
-      
-    # service item loop
-    - title : "Marketing Goals"
-      icon : "ti-rocket" # themify icon pack : https://themify.me/themify-icons
-      content : "Must explain to you how this denouncing praisig pain was give you explain to you how."
-      
-    # service item loop
-    - title : "Targetting Vission"
-      icon : "ti-email" # themify icon pack : https://themify.me/themify-icons
-      content : "Must explain to you how this denouncing praisig pain was give you explain to you how."
-
-######################################## author #############################
-author:
-  enable : true
-  image : "images/about/home-1.jpg"
-  name : "Yasin Arafat"
-  designation : "A technical Writer"
-  content : "
-  Do you want to be even more successful? Learn to love learn and growth. The more efort you put into improving your skills, the bigger the payoff you will get.
-
-
-  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-
-  # signature
-  #siggnature : "images/about/2.png"
-
-############################# Other books ###############################
-otherBooks:
-  enable : true
-  title : "Others books by the author"
-  subtitle : "Laboriosam eos aperiam excepturi accusamus velit repudiandae sit rem incidunt, similique
-            facere quas blanditiis."
-  book:
-    # books loop
-    - image : "images/about/b-1.jpg"
-      link : "#"
-      
-    # books loop
-    - image : "images/about/b-2.jpg"
-      link : "#"
-      
-    # books loop
-    - image : "images/about/b-3.jpg"
-      link : "#"
-      
-    # books loop
-    - image : "images/about/b-4.jpg"
-      link : "#"
-
-################################ Blog ###################################
-blog:
-  enable : true
-  title : "Our insights and articles"
-  subtitle : "Laboriosam eos aperiam excepturi accusamus velit repudiandae sit rem incidunt, similique facere quas blanditiis."
-  # blog post comes from 'content/blog'
-
-########################## Reviews ###########################

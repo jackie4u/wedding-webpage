@@ -55,10 +55,10 @@ publishDir = "docs"
   URL = "doprava" # "contact" 
   weight = 40
 
-  [[menu.main]]
-  name = "Harmonogram"
-  URL = "harmonogram" #"book"
-  weight = 50
+#  [[menu.main]]
+#  name = "Harmonogram"
+#  URL = "harmonogram" #"book"
+#  weight = 50
 
   [[menu.main]]
   name = "Dary"
