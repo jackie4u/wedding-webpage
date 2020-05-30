@@ -44,22 +44,23 @@ dresscode:
     Černá je bezesporu elegantní, ale nepřežeňte to, je to svatba, ne pohřeb.
     Barva svatby je modrá, takže pokud se v ní cítíte dobře, směle do ní!
   "
-  priklad:
-    # award item loop
-    - title : "Panske 1"
-      image : "images/obleceni/panske1.jpg"
+
+  # priklad:
+  #   # award item loop
+  #   - title : "Panske 1"
+  #     image : "images/obleceni/panske1.jpg"
       
-    # award item loop
-    - title : "Damske 1"
-      image : "images/obleceni/damske1.jpg"
+  #   # award item loop
+  #   - title : "Damske 1"
+  #     image : "images/obleceni/damske1.jpg"
       
-    # award item loop
-    - title : "Panske 2"
-      image : "images/obleceni/panske2.jpg"
+  #   # award item loop
+  #   - title : "Panske 2"
+  #     image : "images/obleceni/panske2.jpg"
       
-    # award item loop
-    - title : "Damske 2"
-      image : "images/obleceni/damske2.jpg"
+  #   # award item loop
+  #   - title : "Damske 2"
+  #     image : "images/obleceni/damske2.jpg"
 
 
 #################################### 30 - Ubytovani ################################
