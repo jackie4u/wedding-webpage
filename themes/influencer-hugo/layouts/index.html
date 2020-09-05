@@ -52,6 +52,9 @@
               <h2 class="text-lg">{{ .title | markdownify }}</h2>
             </div>
             <p> {{ .content | markdownify }} </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2584.0430573726567!2d17.341136716047338!3d49.63464307937116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47124b93cdf9125f%3A0xb95eea1ef0ff64b7!2sArcha%20Penzion!5e0!3m2!1sen!2scz!4v1599320215674!5m2!1sen!2scz" 
+            width="400" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
           </div>
         </div>
       </div>
@@ -112,7 +115,9 @@
               {{ end }}
               <div class="content">
                 <h5>{{ .title | markdownify }}</h5>
-                <p>{{ .content | markdownify }}</p>
+                <p>{{ .content | markdownify }}
+                <br> Web: <a href="{{ .web | markdownify }}"> {{ .web | markdownify }} </a>
+                </p>
               </div>
             </div>
             {{ end }}
@@ -165,10 +170,12 @@
     <section class="setcion" id="harmonogram">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="section-heading text-center">
-            <h2 class="text-lg">{{ .title | markdownify }}</h2>
+          <div class="col-lg-8">
+            <div class="section-heading text-center">
+              <h2 class="text-lg">{{ .title | markdownify }}</h2>
+            </div>
+            <p>{{ .content | markdownify }}</p>
           </div>
-          <p>{{ .content | markdownify }}</p>
           <div class="book-info">
             <ul class="list-unstyled mt-4 mb-5">
               {{ range .inside }}
@@ -195,6 +202,7 @@
               <h2 class="text-lg">{{ .title | markdownify }}</h2>
             </div>
             <p>{{ .content | markdownify }}</p>
+            <img src="{{ .image | relURL }}" alt="QR kód pro poslání finančního daru">
           </div>
         </div>
       </div>
@@ -223,13 +231,13 @@
             <div class="chapter-item">
               <h4>{{ .title | markdownify }}</h4>
               <h5>{{ .subtitle | markdownify }}</h5>
-              {{ if .icon }}
-              <div class="icon-block">
-                <i class="{{ .icon }}"></i>
-              </div>
-              {{ end }}
               <div class="content">
-                <p>{{ .content | markdownify }}</p>
+                <p>
+                  {{ if .icon }}
+                  <i class="{{ .icon }}"></i>  
+                  {{ end }}
+                  <a href="tel:{{ .telephone | markdownify }}"> {{ .content | markdownify }} </a>
+                </p>
               </div>
             </div>
           </div>

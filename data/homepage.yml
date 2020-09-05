@@ -10,10 +10,9 @@ banner:
 
   inside:
     # inside item loop
-    - insideItem : " 4. října 2020 (neděle)"
+    - insideItem : " 4. října 2020 (neděle) 11:00"
     - insideItem : "Archa, Svatý Kopeček, Olomouc"
-    # insideItem : "Vše se bude konat na jednom místě. Obřad, hostina i after-party."
-
+    - insideItem : "Vše se bude konat na jednom místě (obřad, hostina i zábava)"
 
 ################################# 10 - Den D ##############################
 ################################# Contact ##############################
@@ -85,27 +84,32 @@ ubytovani:
     # feature item loop
     - title : "Smarthotel Nezvalova Archa"
       icon : "ti-home" # themify icon pack : https://themify.me/themify-icons
-      content : "https://www.nezvalovaarcha.cz/"
+      content : "Zde bude bydlet hlavní štáb"
+      web : "https://www.nezvalovaarcha.cz"
 
       # feature item loop
     - title : "Long Story Short"
       icon : "ti-write" # themify icon pack : https://themify.me/themify-icons
-      content : "https://www.longstoryshort.cz/"
+      content : "Hipsteři a dřevorubci možná najdou místo v tomto zajímavém hostelu"
+      web : "https://www.longstoryshort.cz"
 
       # feature item loop
     - title : "Miss Sophies"
       icon : "ti-eye" # themify icon pack : https://themify.me/themify-icons
-      content : "https://www.miss-sophies.com/cs/hotel/olomouc/"
+      content : "Romantické duše najdou hnízdečko lásky v malém hotýlku"
+      web : "https://www.miss-sophies.com/cs/hotel/olomouc"
 
     # feature item loop
     - title : "Hotel NH Collection"
       icon : "ti-money" # themify icon pack : https://themify.me/themify-icons
-      content : "https://www.nh-olomouc.eu/"
+      content : "Ti co nemají do kapsy hluboko se nejspíš budou cítit nejlépe na tomto posh místě"
+      web : "https://www.nh-olomouc.eu"
 
           # feature item loop
     - title : "Koleje Univerzity Palackého"
       icon : "ti-face-smile" # themify icon pack : https://themify.me/themify-icons
-      content : "https://skm.upol.cz/ubytovani/hotel/"
+      content : "Všichni ostatní si budou užívat zábavy se studenty"
+      web : "https://skm.upol.cz/ubytovani/hotel"
 
 ################################# 40 - Doprava ##############################
 ################################# Contact ##############################
@@ -115,9 +119,9 @@ doprava:
   title: "Doprava"
   content: "
     Jak se dostanete do Olomouce necháme na vás. Sice zde není mezinárodní letiště, ale snad postačí hlavní železniční tah, dálnice, případně mohou vodáci sjet řeku Moravu. 
-    
-    Na obřad vás můžeme dovézt. Pokud budete mít zájem, tak vás před svatbou v určený čas můžeme nabrat autem a dopravit.
-    Jakmile budete unaveni, tak vás následně naši taxikáři zavezou zase zpátky do Olomouce nebo blízkého okolí.
+    \n\n
+    Na obřad vás ale můžeme dovézt. Pokud budete mít zájem, tak vás před svatbou v určený čas můžeme nabrat autem a dopravit na místo.
+    Jakmile budete unaveni, tak vás následně naši šoféři zavezou zase zpátky do Olomouce nebo blízkého okolí.
     "
 
   dopravaSeznam:
@@ -134,7 +138,7 @@ doprava:
         - listItem : "Smarthotel Nezvalova Archa - Nezvalova 3 779 00 Olomouc"
 
     # contact Item loop
-    - title : "Taxikář"
+    - title : "Šofér"
       icon : "ti-headphone-alt" # themify icon pack : https://themify.me/themify-icons
       list:
         - listItem : "telefon doplníme"
@@ -144,36 +148,35 @@ doprava:
 ######################## Book ##########################
 
 harmonogram:
-  enable: false
-  title: "Harmonogram svatby"
-  content: "Připravujeme!"
+  enable: true
+  title: "Harmonogram"
+  # content: "Připravujeme!"
 
   inside:
-    # inside item loop
-    #- insideItem : "13:06 - Sraz na paloučku poblíž penzionu"
-    # insideItem : "Sraz na paloučku poblíž penzionu"
-    #- insideItem : "14:07 - Se rozhodne jestli ANO nebo NE"
-    #- insideItem : "15:08 - Budeme hodovat"
-    #- insideItem : "Budeme hodovat"
-    #- insideItem : "16:09 - Zakrojíme dort"
-    #- insideItem : "Zakrojíme dort"
-    #- insideItem : "17:12 - Přidají se k nám zvířata"
-    #- insideItem : "18:09 - Budeme tancovat"
-    #- insideItem : "Budeme tancovat"
-    #- insideItem : "20:10 - Budeme zase jíst"
-    #- insideItem : "21:11 - Zábava do posledního stojícího"
-    #- insideItem : "03:03 - Všechna zvířata se vráti do Zoo"
+     # inside item loop
+    - insideItem : "11:06 - Příjezd hostů na palouček poblíž penzionu"
+    - insideItem : "12:07 - Obřad a rozhodneme jestli ANO nebo NE"
+    - insideItem : "12:48 - Společná fotka všech svatebčanů"
+    - insideItem : "13:39 - Bude hostina"
+    - insideItem : "16:09 - Zakrojíme dort"
+    - insideItem : "17:40 - Hraje hudba do tance"
+    - insideItem : "18:11 - První novomanželský tanec"
+    - insideItem : "20:12 - Budeme zase jíst"
+    - insideItem : "21:11 - Házení podvazku"
+    - insideItem : "03:03 - Zábava do posledního stojícího"
+
 
 ######################################## 60 - Dary #############################
 ######################### Quote #############################
 dary:
   enable : true
   title : "Dary"
+  image : "images/qr-platba-svatebni-dar.png"
   content: "
-    Nic nám nedávejte. \n\n 
     Pokud si však vaše filantropické já nemůže pomoci, tak nám můžete dát libovolnou částku (ideálně v české měně). 
     Na místě svatby bude připravená pokladncie nebo můžete dary posílat rovnou na náš společný účet. \n\n 
-    Peníze použijeme transparentně na zaplacení společného dobrého jídla. Co zbyde, tak procestujeme!
+    Peníze použijeme transparentně na zaplacení společného jídla a pití.
+    Za zbytek si koupíme naši vysněnou madraci do postele! 
   "
 
 ######################### 70 - Kontakty ##########################
@@ -188,34 +191,39 @@ kontakty:
     - title : "Ženich"
       subtitle : "Jan Vačkář"
       icon : "ti-mobile"
-      content : "Telefon doplníme"
+      telephone : "+420605868797"
+      content : "(+420) 605 868 797"
 
     # chapter preview loop
     - title : "Nevěsta"
       subtitle : "Terezka Stoklasová"
       icon : "ti-mobile"
-      content : "Telefon doplníme"
+      telephone : "+420607379587"
+      content : "(+420) 607 379 587"
 
     # chapter preview loop
     - title : "Svědek ženicha"
       subtitle : "Jirka Králík"
       icon : "ti-mobile"
-      content : "Telefon doplníme"
+      telephone : "+420775257313"
+      content : "(+420) 775 257 313"
 
     # chapter preview loop
     - title : "Svědkyně nevěsty"
       subtitle : "Alenka Šimková"
       icon : "ti-mobile"
-      content : "Telefon doplníme"
+      telephone : "+420774380366"
+      content : "(+420) 774 380 366"
 
     # chapter preview loop
     - title : "Provozní penzionu Archa"
       subtitle : "Jakub Steiger"
       icon : "ti-mobile"
-      content : "Telefon doplníme"
+      telephone : "+420737523623"
+      content : "(+420) 737 523 623"
 
     # chapter preview loop
     - title : "Canisterapeutka"
       subtitle : "Tiffany"
       icon : "ti-mobile"
-      content : "Telefon doplníme"
+      content : "Off the grid"
