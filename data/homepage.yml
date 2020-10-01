@@ -21,8 +21,7 @@ dend:
   enable: true
   title: "Den 'D'"
   content: "
-    Těšíme se na Vás 4. října 2020. Doufáme, že v říjnu bude epidemiologická situace přívětivější a všichni si svatbu užijeme více, než bychom bývali v červnu!
-    V novém datu spatřujeme mnohé výhody: \n
+    Těšíme se na Vás 4. října 2020. V novém datu spatřujeme mnohé výhody: \n
     - Nebude takový vedro. \n
     - Máme více času na plánování/rozmýšlení se, jestli ano nebo ne. \n
     - Janek nikdy nezapomene na výročí, protože Terezka má dva dny potom narozeniny. \n
@@ -214,10 +213,10 @@ kontakty:
 
     # chapter preview loop
     - title: "Svědek ženicha"
-      subtitle: "Jirka Králík"
+      subtitle: "Lukáš Dohnal"
       icon: "ti-mobile"
-      telephone: "+420775257313"
-      content: "(+420) 775 257 313"
+      telephone: ""
+      content: ""
 
     # chapter preview loop
     - title: "Svědkyně nevěsty"
