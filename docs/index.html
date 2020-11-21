@@ -1,576 +1,223 @@
+<!-- Based on Parallax Template from w3css -->
 <!DOCTYPE html>
-<html lang="en-us"><head>
-  <meta charset="utf-8">
-  <title>Terezka a Janek</title>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="">
-  
-  <meta name="generator" content="Hugo 0.62.2" />
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
 
-  <!-- plugins -->
-  
-  <link rel="stylesheet" href="https://www.svatbaroku.eu/plugins/bootstrap/bootstrap.min.css ">
-  
-  <link rel="stylesheet" href="https://www.svatbaroku.eu/plugins/slick/slick.css ">
-  
-  <link rel="stylesheet" href="https://www.svatbaroku.eu/plugins/themify-icons/themify-icons.css ">
-  
-  <link rel="stylesheet" href="https://www.svatbaroku.eu/plugins/magnific-popup/magnific-popup.css ">
-  
+    body,
+    html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
 
-  
-  <link id="snipcart-theme" type="text/css" href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet">
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-  <!-- Main Stylesheet -->
-  
-  <link rel="stylesheet" href="https://www.svatbaroku.eu/scss/style.min.css" media="screen">
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('images/uvod.jpg');
+        min-height: 100%;
+    }
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="/images/favicon.png " type="image/x-icon">
-  <link rel="icon" href="/images/favicon.png " type="image/x-icon">
+    /* Second image (Photos) */
+    .bgimg-2 {
+        background-image: url("images/fotky.jpg");
+        min-height: 400px;
+    }
 
-</head><body><div class="main-navigation fixed-top site-header" id="mainmenu-area">
-  <nav class="navbar navbar-expand-lg ">
-    <div class="container align-items-center">
-      <a class="navbar-brand" href="https://www.svatbaroku.eu/">
-        
-        <h2 class="mb-0 text-color-2">Terezka a Janek</h2>
-        
-      </a>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmain"
-        aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="ti-menu-alt"></span>
-      </button>
+    /* Third image (Video) */
+    .bgimg-3 {
+        background-image: url("images/video.jpg");
+        min-height: 400px;
+    }
 
-      
-      <div class="collapse navbar-collapse text-center text-lg-left" id="navbarmain">
-        
-        <ul class="navbar-nav ml-auto">
-          
-          
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="#dend">Den &#39;D&#39;</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="#dresscode">Dress code</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="#ubytovani">Ubytování</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="#doprava">Doprava</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="#harmonogram">Harmonogram</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="#dary">Dary</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="#kontakty">Kontakty</a>
-          </li>
-          
+    .w3-wide {
+        letter-spacing: 10px;
+    }
 
-          
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
 
-        
-      </div>
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: scroll;
+            min-height: 400px;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Navigace">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-thumbs-up"></i>  Poděkování</a>
+            <a href="#photos" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-picture-o"></i>  Fotky</a>
+            <a href="#video" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-video-camera"></i>  Video</a>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Poděkování</a>
+            <a href="#photos" class="w3-bar-item w3-button" onclick="toggleFunction()">Fotky</a>
+            <a href="#video" class="w3-bar-item w3-button" onclick="toggleFunction()">Video</a>
+        </div>
     </div>
-  </nav>
-</div>
 
-  
-   
-  
-    <section
-      class="banner-main py-7"
-      id="banner"
-      style="background-image: url('/images/banner.png');"
-    >
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-lg-7 col-md-8">
-            <div class="main-banner">
-              <h1 class="mb-3 mt-2">Bereme se</h1>
-              <p class="mb-4"></p>
-              <div class="book-info">
-                <ul class="list-unstyled mt-4 mb-5">
-                   
-                  <li><b>  4. října 2020 (neděle) 11:00 </b></li>
-                  
-                  <li><b> Archa, Svatý Kopeček, Olomouc </b></li>
-                  
-                  <li><b> Vše se bude konat na jednom místě (obřad, hostina i zábava) </b></li>
-                  
-                </ul>
-              </div>
-              <button
-                class="snipcart-add-item btn btn-main mt-2"
-                data-item-id="1"
-                data-item-name="Bereme se"
-                data-item-image="/images/banner.png"
-                onClick="window.open('https://forms.gle/bsCoFEByQ6fJ2avt8');"
-              >
-                Potvrdit účast <i class="ti-angle-right ml-3"></i>
-              </button>
-            </div>
-          </div>
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> 
+            <span class="w3-xxlarge w3-text-white w3-wide">Děkujeme</span>
+                <!-- <span class="w3-hide-small"> Děkujeme </span> -->
+            </span>
         </div>
-      </div>
-    </section>
-   
-  
-
-  
-  
-   
-  
-    <section class="setcion" id="dend">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-heading text-center">
-              <h2 class="text-lg">Den &lsquo;D&rsquo;</h2>
-            </div>
-            <p> <p>Těšíme se na Vás 4. října 2020. V novém datu spatřujeme mnohé výhody:</p>
-<ul>
-<li>Nebude takový vedro.</li>
-<li>Máme více času na plánování/rozmýšlení se, jestli ano nebo ne.</li>
-<li>Janek nikdy nezapomene na výročí, protože Terezka má dva dny potom narozeniny.</li>
-</ul>
-<p>Každopádně doufáme, že změna data Vás neodradí a dorazíte. Protože pro Vás máme připravená skvělá vína a piva a spoustu slivovice. Tvrdý alkohol se bude platit zvlášť na baru, třeba kartou. Takže nebudete muset pít jenom slivovici. Čeká nás klasická česká svíčková a raut se samýma dobrotama, pro ty, kdo nám neutečou po dortu. Pokud odejdete ještě dřív, než před dortem, tak vás budeme pokutovat.</p>
-<p>Taky tam bude skvělý fotograf, takže není nutné, abychom se všichni navzájem fotili. Nebo hůř, postovali na instagram. Nebo třeba odepisovali na pracovní mail! Tak. Snad jsme Vás neodradili, protože bez kohokoli z Vás by ta naše svatba nebyla ono. Jsme vděčni, že kolem sebe máme tak moc fajn lidi a že Vás můžeme pozvat na náš Den &lsquo;D&rsquo;.</p>
- </p>
-          </div>
-        </div>
-      </div>
-    </section>
-   
-  
-
-  
-   
-  
-    <section id="dresscode" class="section bg-grey" id="awards">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-heading text-center">
-              <h2 class="text-lg">Dress code</h2>
-            </div>
-            <p><p>Oblečte se tak, abyste se cítili příjemně. Pokud možno i tak, aby naše (nutno podotknout, že moderní) babičky zvládly Vaši kreativitu. Pánové, nemusíte se škrtit v saku, ale třeba košile je sexy. Tepláky a jeany by naše babičky asi nerozdejchaly, ale třeba chinos, za to by Vám i koláče upekly.</p>
-<p>Dámy, Vy si jistě poradíte. Šaty, sukně, slušivé kalhoty, jak je libo. Jen bílou vynechte, ať si Vás babičky nepletou s nevěstou (presbyopie čeká většinu z nás). Černá je bezesporu elegantní, ale nepřežeňte to, je to svatba, ne pohřeb.</p>
-<p>Barva svatby je modrá, takže pokud se v ní cítíte dobře, směle do ní!</p>
-</p>
-          </div>
-        </div>
-
-        <div class="row">
-          
-        </div>
-      </div>
-    </section>
-   
-  
-  
-
-  
-  
-   
-  
-    <section class="section" id="ubytovani">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-heading text-center">
-              <h2 class="text-lg">Ubytování</h2>
-            </div>
-            <p>Ubytování automaticky nezajišťujeme pro všechny, ale můžeme vám zařídit skupinovou slevu ve smarthotelu Nezvalova Archa. Vyplňte včas registrační formulář nebo se nám brzy ozvěte. Zároveň jsme se pokusili sesumírovat doporučení na ubytování v různých cenových kategoriích a kvalitách.</p>
-            <p>Seznam ubytování v okolí:</p>
-
-            
-            <div class="feature-item d-flex mt-5 mb-3">
-              
-              <div class="icon-block">
-                <i class="ti-home"></i>
-              </div>
-              
-              <div class="content">
-                <h5>Smarthotel Nezvalova Archa</h5>
-                <p>Zde bude bydlet hlavní štáb
-                <br> Web: <a href="https://www.nezvalovaarcha.cz" target="_blank"> <a href="https://www.nezvalovaarcha.cz">https://www.nezvalovaarcha.cz</a> </a>
-                <br> Adresa: <a href="https://g.page/NezvalovaArcha?share" target="_blank"> Nezvalova 3, 779 00 Olomouc </a>
-                </p>
-              </div>
-            </div>
-            
-            <div class="feature-item d-flex mt-5 mb-3">
-              
-              <div class="icon-block">
-                <i class="ti-write"></i>
-              </div>
-              
-              <div class="content">
-                <h5>Long Story Short</h5>
-                <p>Hipsteři a dřevorubci možná najdou místo v tomto zajímavém hostelu
-                <br> Web: <a href="https://www.longstoryshort.cz" target="_blank"> <a href="https://www.longstoryshort.cz">https://www.longstoryshort.cz</a> </a>
-                <br> Adresa: <a href="https://goo.gl/maps/bP7Ko4gGGxAz8xXA6" target="_blank"> Koželužská 945, 779 00 Olomouc </a>
-                </p>
-              </div>
-            </div>
-            
-            <div class="feature-item d-flex mt-5 mb-3">
-              
-              <div class="icon-block">
-                <i class="ti-eye"></i>
-              </div>
-              
-              <div class="content">
-                <h5>Miss Sophies</h5>
-                <p>Romantické duše najdou hnízdečko lásky v malém hotýlku
-                <br> Web: <a href="https://www.miss-sophies.com/cs/hotel/olomouc" target="_blank"> <a href="https://www.miss-sophies.com/cs/hotel/olomouc">https://www.miss-sophies.com/cs/hotel/olomouc</a> </a>
-                <br> Adresa: <a href="https://goo.gl/maps/DdrvUt5pd5EKG5qP8" target="_blank"> Denisova 33, 779 00 Olomouc </a>
-                </p>
-              </div>
-            </div>
-            
-            <div class="feature-item d-flex mt-5 mb-3">
-              
-              <div class="icon-block">
-                <i class="ti-money"></i>
-              </div>
-              
-              <div class="content">
-                <h5>Hotel NH Collection</h5>
-                <p>Ti co nemají do kapsy hluboko se nejspíš budou cítit nejlépe na tomto posh místě
-                <br> Web: <a href="https://www.nh-olomouc.eu" target="_blank"> <a href="https://www.nh-olomouc.eu">https://www.nh-olomouc.eu</a> </a>
-                <br> Adresa: <a href="https://g.page/NHCollectionOlomoucCongress?share" target="_blank"> Legionářská 1311, 779 00 Olomouc </a>
-                </p>
-              </div>
-            </div>
-            
-            <div class="feature-item d-flex mt-5 mb-3">
-              
-              <div class="icon-block">
-                <i class="ti-face-smile"></i>
-              </div>
-              
-              <div class="content">
-                <h5>Koleje Univerzity Palackého</h5>
-                <p>Všichni ostatní si budou užívat zábavy se studenty
-                <br> Web: <a href="https://skm.upol.cz/ubytovani/hotel" target="_blank"> <a href="https://skm.upol.cz/ubytovani/hotel">https://skm.upol.cz/ubytovani/hotel</a> </a>
-                <br> Adresa: <a href="https://skm.upol.cz/ubytovani/hotel/" target="_blank"> Šmeralova 12, 779 00 Olomouc </a>
-                </p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
-   
-  
-  
-
-  
-  
-   
-  
-    <section class="setcion bg-grey" id="doprava">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 col-lg-8">
-            <div class="section-heading text-center">
-              <h2 class="text-lg">Doprava</h2>
-            </div>
-            <p><p>Jak se dostanete do Olomouce necháme na vás. Sice zde není mezinárodní letiště, ale snad postačí hlavní železniční tah, dálnice, případně mohou vodáci sjet řeku Moravu.</p>
-<p>Na obřad vás ale můžeme dovézt. Pokud budete mít zájem, tak vás před svatbou v určený čas můžeme nabrat autem a dopravit na místo. Jakmile budete unaveni, tak vás následně naši šoféři zavezou zase zpátky do Olomouce nebo blízkého okolí.</p>
-</p>
-          </div>
-        </div>
-
-        <div class="row">
-          
-          <div class="col-lg-4 col-sm-6">
-            <div class="contact-info-block text-center mb-4">
-              <i class="ti-location-pin"></i>
-              <p class="mb-0">Archa, Svatý Kopeček, Olomouc
-                <h5>
-                  <a href="https://goo.gl/maps/NQVz1SsxkGG3vZfw9" target="_blank"> Darwinova 39/252, Svatý Kopeček, 779 00 Olomouc </a>
-                </h5>
-              </p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-sm-6">
-            <div class="contact-info-block text-center mb-4">
-              <i class="ti-anchor"></i>
-              <p class="mb-0">Meeting point k odvozu
-                <h5>
-                  <a href="https://g.page/NezvalovaArcha?share" target="_blank"> Smarthotel Nezvalova Archa - Nezvalova 3, 779 00 Olomouc </a>
-                </h5>
-              </p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-sm-6">
-            <div class="contact-info-block text-center mb-4">
-              <i class="ti-headphone-alt"></i>
-              <p class="mb-0">Šofér
-                <h5>
-                  <a href="https://goo.gl/maps/NQVz1SsxkGG3vZfw9" target="_blank"> telefon doplníme </a>
-                </h5>
-              </p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-   
-  
-  
-
-  
-  
-   
-  
-    <section class="setcion" id="harmonogram">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-heading text-center">
-              <h2 class="text-lg">Harmonogram</h2>
-            </div>
-            <p></p>
-            <img src="/images/harmonogram.png" alt="Harmonogram v tištěné podobě" 
-              style="
-                max-width: 100%;
-                max-height: 100%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-              "
-            >
-          </div>
-          <div class="book-info">
-            <ul class="list-unstyled mt-4 mb-5">
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-   
-  
-  
-
-  
-  
-   
-  
-    <section class="section bg-grey" id="dary">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-heading text-center">
-              <h2 class="text-lg">Dary</h2>
-            </div>
-            <p><p>Pokud si vaše filantropické já nemůže pomoci, tak nám můžete dát libovolnou částku (ideálně v české měně). Na místě svatby bude připravená pokladnice nebo můžete dary posílat rovnou na náš společný účet.</p>
-<p>Peníze použijeme transparentně na zaplacení společného jídla a pití. Za zbytek si koupíme naši vysněnou matraci do postele!</p>
-</p>
-            <img src="/images/qr-platba-svatebni-dar.png" alt="QR kód pro poslání finančního daru"
-              style="
-                max-width: 100%;
-                max-height: 100%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-              "
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-   
-  
-  
-
-  
-  
-   
-  
-    <section class="setcion chapter" id="kontakty">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <div class="section-heading text-center">
-              <h2 class="text-lg">Kontakty</h2>
-              <p>seznam nejdůležitějších lidí</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          
-          <div class="col-sm-6">
-            <div class="chapter-item">
-              <h4>Ženich</h4>
-              <h5>Jan Vačkář</h5>
-              <div class="content">
-                <p>
-                  
-                  <i class="ti-mobile"></i>  
-                  
-                  <a href="tel:&#43;420605868797"> (+420) 605 868 797 </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-6">
-            <div class="chapter-item">
-              <h4>Nevěsta</h4>
-              <h5>Terezka Stoklasová</h5>
-              <div class="content">
-                <p>
-                  
-                  <i class="ti-mobile"></i>  
-                  
-                  <a href="tel:&#43;420607379587"> (+420) 607 379 587 </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-6">
-            <div class="chapter-item">
-              <h4>Svědek ženicha</h4>
-              <h5>Lukáš Dohnal</h5>
-              <div class="content">
-                <p>
-                  
-                  <i class="ti-mobile"></i>  
-                  
-                  <a href="tel:">  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-6">
-            <div class="chapter-item">
-              <h4>Svědkyně nevěsty</h4>
-              <h5>Alenka Šimková</h5>
-              <div class="content">
-                <p>
-                  
-                  <i class="ti-mobile"></i>  
-                  
-                  <a href="tel:&#43;420774380366"> (+420) 774 380 366 </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-6">
-            <div class="chapter-item">
-              <h4>Provozní penzionu Archa</h4>
-              <h5>Jakub Steiger</h5>
-              <div class="content">
-                <p>
-                  
-                  <i class="ti-mobile"></i>  
-                  
-                  <a href="tel:&#43;420737523623"> (+420) 737 523 623 </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-6">
-            <div class="chapter-item">
-              <h4>Canisterapeutka</h4>
-              <h5>Tiffany</h5>
-              <div class="content">
-                <p>
-                  
-                  <i class="ti-mobile"></i>  
-                  
-                  <a href="tel:"> Off the grid </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <button
-          class="snipcart-add-item btn btn-main mt-2"
-          data-item-id="1"
-          data-item-name="Kontakty"
-          data-item-image="/"
-          onClick="window.open('https://forms.gle/bsCoFEByQ6fJ2avt8');"
-        >
-          Potvrdit účast <i class="ti-angle-right ml-3"></i>
-        </button>
-      </div>
-    </section>
-   
-  
-  
-
-<footer class="footer">
-
-  <div class="container">
-    <div class="row footer-btm mt-5 pt-4 border-top">
-      <div class="col-lg-6">
-        
-        <div class="footer">
-         <p> Terezka a Janek</p> 
-         <p> Copyright © 2020 Terezka a Janek ™ All Rights Reserved</p>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="footer-btm-menu text-lg-right">
-          <img src="/images/about/cards-3.png" alt="" class="img-fluid">
-        </div>
-      </div>
     </div>
-  </div>
-</footer>
 
-<!-- JS Plugins -->
+    <!-- Container (Thanks Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <!-- <h3 class="w3-center">Děkujeme</h3> -->
+        <p>
+            Naši milí hosté, ještě jednou děkujeme, že jste námi prožili náš svatební den. Doufáme, že jste si ho užili minimálně stejně tak, jako my.
+        </p>
+    </div>
 
-<script src="https://www.svatbaroku.eu/plugins/jQuery/jquery.min.js"></script>
+    <!-- Second Parallax Image with Photos Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min" id="photos">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">Fotky</span>
+        </div>
+    </div>
 
-<script src="https://www.svatbaroku.eu/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- Container (photos Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <p class="w3-center"><em>
+            Zde se nachází odkazy na galerie s našimi svatebními fotkami<br> 
+            Klikněte na některou z nich a dostanete se do galerie na Google Photos
+        </em></p><br>
 
-<script src="https://www.svatbaroku.eu/plugins/slick/slick.min.js"></script>
+        <div class="w3-row">
+            <div class="w3-col l4 m4 s12 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user-circle w3-margin-right"></i>Pavel Jakubka</b></p><br>
+                <a href="https://photos.app.goo.gl/xvpKjjA7hGf5iFYy5" title="Google-Foto-Galerie-Pavel-Jakubka" target="_blank">
+                    <img src="images/jakubka.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Fotky od fotografa Pavla Jakubka" width="500" height="333">
+                    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">Otevřít album</button>
+                </a>
+            </div>
 
-<script src="https://www.svatbaroku.eu/plugins/magnific-popup/magnific-popup.min.js"></script>
+            <div class="w3-col l4 m4 s12 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user-circle-o w3-margin-right"></i>Oscar Ortega</b></p><br>
+                <a href="https://photos.app.goo.gl/kxubpRmB48s3wfaT6" title="Google-Foto-Galerie-Oscar-Ortega" target="_blank">
+                    <img src="images/oscar.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Fotky od fotografa Oscara Ortegu" width="500" height="333">
+                    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">Otevřít album</button>
+                </a>
+                </div>
 
+            <div class="w3-col l4 m4 s12 w3-center w3-padding-large">
+                <p><b><i class="fa fa-users w3-margin-right"></i>Instax a mobil</b></p><br>
+                <a href="https://photos.app.goo.gl/hQaV5sETKA1BeFBi9" title="Google-Foto-Galerie-Instax-Mobil" target="_blank">
+                    <img src="images/mobil.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Fotky od hostů pomocí" width="500" height="333">
+                    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">Otevřít album</button>
+                </a>
+            </div>
 
+        </div>
+    </div>
 
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
 
-<script type="text/javascript" id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
-  data-api-key="M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"></script>
-<script>
-  Snipcart.execute('registerLocale', 'en', {
-    powered_by: "Themefisher"
-  });
-</script>
+    <!-- Third Parallax Image with Videos Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min" id="video">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">Video</span>
+        </div>
+    </div>
 
-<!-- Main Script -->
+    <!-- Container (video Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">Video</h3>
+        <p class="w3-center"><em>Připravuje se!</em></p>
+    </div>
 
-<script src="https://www.svatbaroku.eu/js/script.min.js"></script>
-<!-- google analitycs -->
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Zpátky na začátek</a>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
 </body>
+
 </html>
